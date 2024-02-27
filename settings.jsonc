@@ -1616,6 +1616,36 @@
                 }
             ]
         },
+        "[Eva Dark]": {
+            "textMateRules": [
+                {
+                    "scope": "meta.bracket",
+                    "settings": {
+                        "foreground": "#B0B7C3"
+                    }
+                },
+            ]
+        },
+        "[Eva Dark Italic]": {
+            "textMateRules": [
+                {
+                    "scope": "meta.bracket",
+                    "settings": {
+                        "foreground": "#B0B7C3"
+                    }
+                },
+            ]
+        },
+        "[Eva Dark Italic Bold]": {
+            "textMateRules": [
+                {
+                    "scope": "meta.bracket",
+                    "settings": {
+                        "foreground": "#B0B7C3"
+                    }
+                },
+            ]
+        },
         "[Eva Dark Bold]": {
             "textMateRules": [
                 {
@@ -2988,7 +3018,22 @@
             "editor.foreground": "#fff",
             "editorCursor.foreground": "#fff"
         },
+        "[Eva Dark]": {
+            "editor.background": "#1d2125",
+            "editorGutter.background": "#1d2125",
+            "sideBar.background": "#24292e"
+        },
         "[Eva Dark Bold]": {
+            "editor.background": "#1d2125",
+            "editorGutter.background": "#1d2125",
+            "sideBar.background": "#24292e"
+        },
+        "[Eva Dark Italic]": {
+            "editor.background": "#1d2125",
+            "editorGutter.background": "#1d2125",
+            "sideBar.background": "#24292e"
+        },
+        "[Eva Dark Italic Bold]": {
             "editor.background": "#1d2125",
             "editorGutter.background": "#1d2125",
             "sideBar.background": "#24292e"
@@ -3570,6 +3615,10 @@
     "java.refactor.renameFromFileExplorer": "autoApply",
     "java.configuration.checkProjectSettingsExclusions": false,
     "java.silentNotification": true,
+    "editor.semanticHighlighting.enabled": false,
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": false
+    },
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
@@ -3692,7 +3741,7 @@
     "telemetry.enableTelemetry": false,
     "code-runner.enableAppInsights": false,
     "telemetry.enableCrashReporter": false,
-    "terminal.integrated.defaultProfile.windows": "openSUSE-Tumbleweed (WSL)",
+    // "terminal.integrated.defaultProfile.windows": "openSUSE-Tumbleweed (WSL)",
     "workbench.iconTheme": "material-icon-theme",
     "liveServer.settings.donotVerifyTags": true,
     "[html]": {
@@ -3774,7 +3823,6 @@
         "**/.trunk/*out": true
     },
     "trunk.trunkGrayOutNonBlockingIssues": false,
-    "window.titleBarStyle": "custom",
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "editor.maxTokenizationLineLength": 40000,
     "[scss]": {
@@ -3785,27 +3833,23 @@
     "gruvboxMaterial.darkContrast": "hard",
     "gruvboxMaterial.italicComments": false,
     "window.menuBarVisibility": "toggle",
-    "vscode-neovim.useCtrlKeysForInsertMode": false,
-    "vscode-neovim.neovimExecutablePaths.linux": "nvim",
-    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
-    "vscode-neovim.mouseSelectionStartVisualMode": true,
+    // "vscode-neovim.useCtrlKeysForInsertMode": false,
+    // "vscode-neovim.neovimExecutablePaths.linux": "nvim",
+    // "vscode-neovim.mouseSelectionStartVisualMode": true,
     // "editor.semanticTokenColorCustomizations": {
     //     "[Vue Theme]": {
     //         "enabled": false
     //     }
     // },
     "base16.generator.activatedThemes": [],
-    // "editor.fontLigatures": "'calt', 'ss03', 'zero'", // best for iosevka font (jetbrains mono)
-    "editor.fontLigatures": true,
-    "editor.fontFamily": "consolas",
+    // "editor.fontLigatures": "'calt', 'ss02' on, 'zero'", // best for iosevka font (jetbrains mono)
+    // "editor.fontLigatures": true,
     "editor.lineHeight": 1.5,
-    "editor.fontSize": 20.5,
     "vscode_custom_css.imports": [
         "file:///C:/Users/Lakshit/.local/customcssforvscode.css"
     ],
     // "editor.fontLigatures": "'cv42' 17",
     "terminal.integrated.lineHeight": 1.1,
-    "prettier.tabWidth": 4,
     "alt-catppuccin.accentColor": "red",
     "alt-catppuccin.syntaxMode": "dark-one",
     "alt-catppuccin.extraBordersEnabled": true,
@@ -3818,8 +3862,6 @@
     },
     "git.openRepositoryInParentFolders": "never",
     "terminal.integrated.fontWeight": "500",
-    "terminal.integrated.fontFamily": "jetbrainsmono nerd font",
-    "terminal.integrated.fontSize": 18,
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
             "source": "PowerShell",
@@ -3836,52 +3878,54 @@
         "Git Bash": {
             "source": "Git Bash"
         },
-        "bash (MSYS2)": {
-            "path": "C:\\msys64\\usr\\bin\\bash.exe",
-            "args": [
-                "--login",
-                "-i"
-            ]
-        },
-        "MINGW64": {
-            "path": "cmd.exe",
-            "args": [
-                "/c",
-                "C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -mingw64"
-            ]
-        },
-        "CLANG17": {
-            "path": "cmd.exe",
-            "args": [
-                "/c",
-                "C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -clang64"
-            ]
-        },
-        "openSUSE-Tumbleweed (WSL)": {
-            "path": "C:\\Windows\\System32\\wsl.exe",
-            "args": [
-                "-d",
-                "openSUSE-Tumbleweed"
-            ]
-        }
+        // "bash (MSYS2)": {
+        //     "path": "C:\\msys64\\usr\\bin\\bash.exe",
+        //     "args": [
+        //         "--login",
+        //         "-i"
+        //     ]
+        // },
+        // "MINGW64": {
+        //     "path": "cmd.exe",
+        //     "args": [
+        //         "/c",
+        //         "C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -mingw64"
+        //     ]
+        // },
+        // "CLANG17": {
+        //     "path": "cmd.exe",
+        //     "args": [
+        //         "/c",
+        //         "C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -clang64"
+        //     ]
+        // },
+        // "openSUSE-Tumbleweed (WSL)": {
+        //     "path": "C:\\Windows\\System32\\wsl.exe",
+        //     "args": [
+        //         "-d",
+        //         "openSUSE-Tumbleweed"
+        //     ]
+        // }
     },
     "workbench.layoutControl.enabled": false,
     "window.commandCenter": false,
     "clangd.fallbackFlags": [
         "-std=c++14"
     ],
-    "security.allowedUNCHosts": [
-        "wsl.localhost"
-    ],
     "oneDarkPro.bold": true,
     "oneDarkPro.editorTheme": "Ayu",
     "editor.lineNumbers": "relative",
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": true,
         "scminput": false
     },
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "editor.fontSize": 20,
+    "editor.fontFamily": "iosevka two expanded",
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontFamily": "jetbrainsmono nerd font",
+    "vscode-neovim.ctrlKeysForInsertMode": [],
     // "editor.stickyScroll.enabled": true,
 }
